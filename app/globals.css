@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=IBM+Plex+Sans+JP&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Monda:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import "tailwindcss";
 
 :root {
@@ -8,8 +9,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-montserrat: "Montserrat", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +20,41 @@
 }
 
 body {
+  @apply font-montserrat;
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main_wrapper {
+  @apply max-w-7xl mx-auto px-5
+}
+
+.mobile_menu {
+  @apply absolute z-10 top-0 left-0 w-full sm:px-16 p-5 md:hidden transition-all duration-300;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.menu_link {
+  @apply block max-md:text-lg md:font-medium hover:text-gray-500 max-lg:text-[10px] text-[15px];
+}
+
+.header_text {
+  @apply my-5 
+}
+
+.header_text h3 {
+  @apply my-5 font-semibold text-3xl
+}
+
+.first_service {
+  @apply md:col-span-full md:relative md:h-[100vh] 
+}
+
+.first_service_image {
+  @apply md:h-full h-[40vh] w-full object-cover rounded-lg;
+}
+
+.first_service .header_text  {
+  @apply md:absolute md:top-1/2 md:-translate-y-1/2 md:w-1/2 md:left-10;
 }
