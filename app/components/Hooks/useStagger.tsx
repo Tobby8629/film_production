@@ -19,7 +19,7 @@ const useStagger = <T extends HTMLElement>() => {
           y: 0,
           duration: 0.8,
           ease: "power2.out",
-          stagger: 0.4,
+          
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
@@ -38,6 +38,7 @@ const useStagger = <T extends HTMLElement>() => {
             opacity: 1,
             y: 0,
             duration: 1,
+            delay: 0.5,
             ease: "power2.out",
             scrollTrigger: {
               trigger: element,
