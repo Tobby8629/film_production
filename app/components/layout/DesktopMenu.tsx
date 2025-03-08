@@ -21,11 +21,11 @@ const DesktopMenu = () => {
     <section className="hidden md:flex justify-between items-center lg:w-[73%]">
       
       <div className="max-lg:mx-3 mx-5 max-md:w-[20%] w-[38%] p-3 px-5 rounded-2xl border border-gray-300 flex items-center">
-        <FontAwesomeIcon icon={faSearch} className="mr-2 text-gray-400" />
+        <FontAwesomeIcon icon={faSearch} className="mr-2 h-2.5 text-gray-400" />
         <input
           type="text"
           placeholder="Search"
-          className="w-full border-0 outline-none text-gray-600 placeholder-gray-400"
+          className="9/12 border-0 outline-none text-gray-600 placeholder-gray-400"
         />
       </div>
 

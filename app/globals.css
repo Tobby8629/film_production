@@ -9,6 +9,8 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-link: rgba(0, 81, 255, 1);
+  --color-pry-dark-blue: rgba(0, 21, 65, 1);
   --font-montserrat: "Montserrat", sans-serif;
 }
 
@@ -39,6 +41,40 @@ body {
   @apply block max-md:text-lg md:font-medium hover:text-gray-500 max-lg:text-[10px] text-[15px];
 }
 
+.footer {
+  box-shadow: 0px 0px 2px 1px gray;
+}
+
+.footer_nav {
+  @apply max-md:w-[70%] max-lg:w-[80%] pt-7 max-sm:text-sm lg:flex lg:justify-between lg:items-start
+}
+
+.footer_nav section {
+  @apply lg:w-[10%] mb-5
+}
+
+.footer_nav section:first-child {
+  @apply lg:w-[33%]
+}
+
+.footer_nav section:nth-child(3),
+.footer_nav section:nth-child(4) {
+  @apply lg:w-[20%]
+}
+
+.footer_nav section h3{
+  @apply lg:mb-5
+}
+
+.terms {
+  @apply flex justify-between items-center max-sm:text-sm max-sm:w-[70%] lg:gap-7
+}
+
+
+.services {
+ @apply py-12
+}
+
 .header_text {
   @apply my-5 
 }
@@ -56,5 +92,17 @@ body {
 }
 
 .first_service .header_text  {
-  @apply md:absolute md:top-1/2 md:-translate-y-1/2 md:w-1/2 md:left-10;
+  @apply md:absolute md:top-1/2 md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 md:text-white;
 }
+
+.first_service .header_text p {
+  @apply xl:text-2xl xl:leading-10
+}
+
+.first_service .header_text h3 {
+  @apply text-4xl
+}
+
+.video-carousel_container {
+    @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]
+  }

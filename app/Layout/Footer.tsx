@@ -1,5 +1,5 @@
 import React from 'react'
-import { footerText, getInTouch, quickLinks } from '../utils/constants'
+import { footerText, getInTouch, quickLinks, socials } from '../utils/constants'
 import Mapping from '../components/reuseable/Mapping'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -7,12 +7,12 @@ import { phone } from '@/public/svgs'
 
 const Footer = () => {
   return (
-    <footer className=' bg-pry-red text-pry-white'>
+    <footer className='footer'>
       <div className='main_wrapper'>
         <div className='footer_nav'>
           <section>
-            <h2 className='mb-5 text-lg font-semibold'>Grammercetamol</h2>
-            <p className='max-sm:leading-[23px] leading-[28px] font-sans'>{footerText}</p> 
+            <h2 className='mb-5 text-lg font-semibold'>Film Production</h2>
+            <p className='max-sm:leading-[23px] leading-[28px]'>{footerText}</p> 
           </section>
           <section className='max-sm:my-7'>
             <h3 className='header'>Quick Links</h3>
@@ -36,7 +36,7 @@ const Footer = () => {
             </Mapping>
             
           </section>
-          {/* <section className='max-sm:my-7'>
+          <section className='max-sm:my-7'>
             <h3 className='header'>Follow Us</h3>
             <Mapping array={socials}>
               {(item)=>
@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
               }
             </Mapping>
-          </section> */}
+          </section>
         </div>
         <div className=' border-t-2 py-10 mt-10 border-pry-white lg:flex lg:items-center justify-between'>
           <p className='max-sm:text-xs font-thin flex items-center'><span className='text-lg mr-1'>&copy;</span> 2025 GRAMMERCETAMOL. ALL RIGHT RESERVED</p>

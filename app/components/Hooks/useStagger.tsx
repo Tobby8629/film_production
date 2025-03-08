@@ -23,7 +23,7 @@ const useStagger = <T extends HTMLElement>() => {
           scrollTrigger: {
             trigger: element,
             start: "top 80%",
-            toggleActions: "play none none none",
+            toggleActions: "play reverse play reverse",
           },
         }
       );
@@ -37,13 +37,34 @@ const useStagger = <T extends HTMLElement>() => {
           {
             opacity: 1,
             y: 0,
-            duration: 1,
+            duration: 1.2,
+            delay: 0.7,
+            ease: "power2.out",
+            scrollTrigger: {
+              trigger: element,
+              start: "top 80%",
+              toggleActions: "play reverse play reverse",
+            },
+          }
+        );
+      }
+
+      // Animate the headText inside the element
+      const headText = element.querySelector("h3");
+      if (headText) {
+        gsap.fromTo(
+          headText,
+          { opacity: 0, y: 50 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
             delay: 0.5,
             ease: "power2.out",
             scrollTrigger: {
               trigger: element,
               start: "top 80%",
-              toggleActions: "play none none none",
+              toggleActions: "play reverse play reverse",
             },
           }
         );

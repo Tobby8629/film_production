@@ -13,7 +13,7 @@ const NavBar = () => {
 
   return (
     <nav className="main_wrapper flex justify-between items-center py-5 relative">
-      <h2 className="text-2xl font-semibold">Grammercetamol</h2>
+      <h2 className="text-2xl font-semibold">Film Production</h2>
       <DesktopMenu />
       <div className="md:hidden cursor-pointer" >
         <FontAwesomeIcon 
