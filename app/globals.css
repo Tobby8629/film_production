@@ -31,6 +31,10 @@ body {
   @apply max-w-7xl mx-auto px-5
 }
 
+.nav_wrapper {
+  @apply bg-white text-pry-dark-blue rounded-3xl absolute top-5 flex justify-between items-center py-2 px-5 md:w-[95%] left-1/2 -translate-x-1/2 z-[99]
+}
+
 .mobile_menu {
   @apply absolute z-10 top-0 left-0 w-full sm:px-16 p-5 md:hidden transition-all duration-300;
   background: var(--background);

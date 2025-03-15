@@ -1,4 +1,4 @@
-import { faSearch, faTimes } from '@fortawesome/free-solid-svg-icons'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { usePathname } from 'next/navigation'
 import React from 'react'
@@ -18,10 +18,10 @@ const MobileMenu = ({toggleMenu, isMenuOpen}: mobileMenu) => {
           onClick={toggleMenu} 
         />
 
-        <div className='mt-12 w-[85%] mx-auto p-3 px-5 rounded-4xl border-[1px] border-pry-faint-gray'>
+        {/* <div className='mt-12 w-[85%] mx-auto p-3 px-5 rounded-4xl border-[1px] border-pry-faint-gray'>
           <FontAwesomeIcon icon={faSearch} className='mr-3 text-pry-faint-gray'/>
           <input type="text" placeholder="Search" className="w-10/12 border-0 outline-0 text-pry-faint-gray placeholder:text-pry-faint-gray" />
-        </div>
+        </div> */}
        
           <Mapping array={menuLinks} className="py-8 max-md:w-[40%]">
             {(item) => (

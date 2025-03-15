@@ -12,7 +12,8 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav className="main_wrapper flex justify-between items-center py-5 relative">
+    <nav className="main_wrapper relative">
+      <div className='nav_wrapper'>
       <h2 className="text-2xl font-semibold">Film Production</h2>
       <DesktopMenu />
       <div className="md:hidden cursor-pointer" >
@@ -20,9 +21,10 @@ const NavBar = () => {
           icon={faBars} 
           style={{ fontSize: 25 }} 
           onClick={toggleMenu} 
-        />
+        /> 
       </div>
       <MobileMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
+      </div>
     </nav>
   );
 };

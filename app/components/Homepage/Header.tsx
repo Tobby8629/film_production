@@ -21,13 +21,13 @@ const Header = () => {
             ref={(el) => {
               boxesRef.current[index] = el;
             }}
-            className={`${index === 0 ? 'first_service' : ''}`}
+            // className={`${index === 0 ? 'first_service' : ''}`}
           >
             <Image
               src={item?.icon}
               alt={item.name}
               
-              className={`${index === 0 ? 'first_service_image' : "h-[40vh] w-full object-cover rounded-lg"}`}
+              // className={`${index === 0 ? 'first_service_image' : "h-[40vh] w-full object-cover rounded-lg"}`}
             />
             <div className="header_text">
               <h3>{item.title}</h3>
