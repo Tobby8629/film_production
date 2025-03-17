@@ -36,7 +36,7 @@ body {
 }
 
 .nav_wrapper {
-  @apply bg-white text-pry-dark-blue rounded-4xl absolute top-5 flex justify-between items-center py-2 px-5 md:px-8 w-[95%] left-1/2 -translate-x-1/2 z-[99] xl:px-10
+  @apply max-lg:w-[90%] max-lg:mx-auto bg-white text-pry-dark-blue rounded-4xl absolute top-5 md:top-15 flex justify-between items-center py-2 px-5 md:px-8 w-[95%] left-1/2 -translate-x-1/2 z-[99] xl:px-10
 }
 
 .active {
@@ -98,31 +98,31 @@ body {
 }
 
 .header_text {
-  @apply my-5; 
+  @apply my-5 ; 
 }
 
 .header_text h3 {
-  @apply my-5 font-semibold text-3xl 
+  @apply my-5 font-semibold
 }
 
 .first_service {
-  @apply md:col-span-full md:relative md:h-[100vh] 
+  @apply h-[75vh] md:col-span-full md:relative md:h-[100vh] 
 }
 
 .first_service_image {
-  @apply md:h-full h-[40vh] w-full object-cover rounded-lg;
+  @apply h-full max-md:object-right object-cover w-full rounded-lg;
 }
 
 .first_service .header_text  {
-  @apply bg-[#0000005d] px-5 pb-3 md:absolute md:top-1/2 md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 md:text-white;
+  @apply w-[90%] max-md:left-1/2 max-md:-translate-x-1/2  max-lg:absolute bottom-2.5 bg-[#0000005d] px-5 pb-3 md:absolute md:top-1/2 md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 text-white;
 }
 
 .first_service .header_text p {
-  @apply xl:text-xl mb-5 xl:leading-10
+  @apply text-sm max-md:leading-6 xl:text-lg mb-5 xl:leading-10
 }
 
 .first_service .header_text h3 {
-  @apply text-6xl
+  @apply text-3xl md:text-6xl
 }
 
 .video-carousel_container {

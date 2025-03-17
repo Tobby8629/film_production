@@ -20,6 +20,7 @@ const useStagger = <T extends HTMLElement>() => {
           y: 0,
           duration: 0.8,
           ease: "power2.out",
+          delay: .5,
           
           scrollTrigger: {
             trigger: element,
