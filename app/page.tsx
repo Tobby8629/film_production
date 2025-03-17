@@ -1,14 +1,16 @@
 // import Image from "next/image";
 import Footages from "./components/Homepage/Footages";
-import Header from "./components/Homepage/Header";
+import Hero from "./components/Homepage/Hero";
 import Reviews from "./components/Homepage/Reviews";
+import Services from "./components/Homepage/Services";
 
 export default function Home() {
   return (
     <main>
-      <Header />
+      <Hero />
+      <Services/>
       <Reviews />
-     <Footages />
+      <Footages />
     </main>
   );
 }

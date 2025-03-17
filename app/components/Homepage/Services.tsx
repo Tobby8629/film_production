@@ -7,7 +7,7 @@ import useStagger from "../Hooks/useStagger";
 import Link from "next/link";
 
 
-const Header = () => {
+const Services = () => {
   const boxesRef = useStagger<HTMLDivElement>();
 
   return (
@@ -40,4 +40,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default Services;

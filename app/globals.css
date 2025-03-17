@@ -12,6 +12,8 @@
   --color-link: rgba(0, 81, 255, 1);
   --color-pry-dark-blue: rgba(0, 21, 65, 1);
   --font-montserrat: "Montserrat", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-sans: "Open Sans", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +21,8 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
+ 
 }
 
 body {
@@ -32,7 +36,11 @@ body {
 }
 
 .nav_wrapper {
-  @apply bg-white text-pry-dark-blue rounded-3xl absolute top-5 flex justify-between items-center py-2 px-5 md:w-[95%] left-1/2 -translate-x-1/2 z-[99]
+  @apply bg-white text-pry-dark-blue rounded-4xl absolute top-5 flex justify-between items-center py-2 px-5 md:px-8 w-[95%] left-1/2 -translate-x-1/2 z-[99] xl:px-10
+}
+
+.active {
+  @apply h-0.5 mx-auto rounded-xl bg-blue-500 w-[80%] translate-y-0.5
 }
 
 .mobile_menu {
@@ -42,15 +50,20 @@ body {
 }
 
 .menu_link {
-  @apply block max-md:text-lg md:font-medium hover:text-gray-500 max-lg:text-[10px] text-[15px];
+  @apply block max-md:text-lg md:font-medium hover:text-gray-500 max-lg:text-[10px] xl:text-xl;
 }
 
 .footer {
   box-shadow: 0px 0px 2px 1px gray;
 }
 
+.footer_svg {
+ @apply mr-1.5 w-[15px];
+ color: var(--foreground);
+}
+
 .footer_nav {
-  @apply max-md:w-[70%] max-lg:w-[80%] pt-7 max-sm:text-sm lg:flex lg:justify-between lg:items-start
+  @apply max-md:w-[80%] max-lg:w-[40%] pt-7 max-sm:text-sm lg:flex lg:justify-between lg:items-start
 }
 
 .footer_nav section {
@@ -70,6 +83,11 @@ body {
   @apply lg:mb-5
 }
 
+.subscribe {
+  @apply flex items-center justify-between border-[1px] rounded-3xl mt-3;
+  border-color: var(--foreground);
+}
+
 .terms {
   @apply flex justify-between items-center max-sm:text-sm max-sm:w-[70%] lg:gap-7
 }
@@ -80,11 +98,11 @@ body {
 }
 
 .header_text {
-  @apply my-5 
+  @apply my-5; 
 }
 
 .header_text h3 {
-  @apply my-5 font-semibold text-3xl
+  @apply my-5 font-semibold text-3xl 
 }
 
 .first_service {
@@ -96,17 +114,23 @@ body {
 }
 
 .first_service .header_text  {
-  @apply md:absolute md:top-1/2 md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 md:text-white;
+  @apply bg-[#0000005d] px-5 pb-3 md:absolute md:top-1/2 md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 md:text-white;
 }
 
 .first_service .header_text p {
-  @apply xl:text-2xl xl:leading-10
+  @apply xl:text-xl mb-5 xl:leading-10
 }
 
 .first_service .header_text h3 {
-  @apply text-4xl
+  @apply text-6xl
 }
 
 .video-carousel_container {
     @apply relative sm:w-[70vw] w-[88vw] md:h-[70vh] sm:h-[50vh] h-[35vh]
-  }
+}
+
+.review_wrapper {
+  @apply py-10;
+  background: var(--foreground);
+  color: var(--background); 
+}

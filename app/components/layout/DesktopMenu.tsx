@@ -16,8 +16,7 @@ const DesktopMenu = () => {
   }, [pathName]);
 
   return (
-    <section className="hidden md:flex justify-between items-center lg:w-[73%]">
-
+    <section className="hidden md:flex justify-between items-center ">
 
         <Mapping array={menuItems} className="flex items-center gap-4 md:gap-[2px] xl:gap-7">
           {(item) => (
@@ -25,7 +24,6 @@ const DesktopMenu = () => {
               key={item.name}
               className={clsx(
                 "p-2 px-5 md:px-2 rounded-lg transition-colors duration-200",
-                item.isActive && "bg-red-100"
               )}
             >
               <Link
@@ -33,11 +31,12 @@ const DesktopMenu = () => {
                 className={clsx(
                   "menu_link",
                   item.name === "Sign Up" && "btn",
-                  item.isActive && "text-red-600 font-semibold"
+                  item.isActive && " font-semibold"
                 )}
               >
                 {item.name}
               </Link>
+              {item.isActive ? <div className="active"></div> : null}
             </div>
           )}
         </Mapping>

@@ -1,21 +1,19 @@
-import mail from "./mail.svg"
-import phone from "./phone.svg"
+import Mail from "./Mail";
+import Phone from "./Phone"
 import facebook from "./facebook.svg"
-import insta from "./insta.svg";
-import X from "./X.svg";
-import linkedIn from "./linkedIn.svg"
-import whiteFacebook from "./whiteFacebook.svg"
+import Insta from "./Insta";
+import Times from "./Times";
+import LinkedIn from "./LinkedIn";
 import upperquote from "./upperquote.svg"
-
-
+import WhiteFacebook from "./WhiteFacebook";
 
 export {
-  mail,
-  phone,
+  Mail,
+  Phone,
   facebook,
-  linkedIn,
-  insta,
-  X,
-  whiteFacebook,
+  LinkedIn,
+  Insta,
+  Times,
+  WhiteFacebook,
   upperquote
 }

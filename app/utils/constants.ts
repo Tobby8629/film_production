@@ -1,5 +1,7 @@
 import { foot1, foot2, foot3, foot4, foot5, service_one } from "@/public/png"
-import { insta, linkedIn, mail, phone, whiteFacebook, X } from "@/public/svgs"
+import { Insta, LinkedIn, Mail, Phone, Times, WhiteFacebook, } from "@/public/svgs"
+import  { ElementType } from "react"
+
 
 export const footerText = `
   Lorem ipsum dolor sit amet consectetur. Odio turpis vitae velit adipiscing.
@@ -10,10 +12,10 @@ export const footerText = `
 
 export const quickLinks = [
  
-  {
-    name: "Add Reviews",
-    link: "/reviews"
-  },
+  // {
+  //   name: "Add Reviews",
+  //   link: "/reviews"
+  // },
   {
     name: "About Us",
     link: "/about_us"
@@ -28,42 +30,42 @@ export const quickLinks = [
   },
 ]
 
-export const getInTouch = [
+export const getInTouch : {text: string, icon: ElementType}[] = [
   {
-    text: "filmproduction@gmail.com",
-    icon: mail
+    text: "Filmcontemporary@gmail.com",
+    icon: Mail,
   },
   {
     text: "123456777",
-    icon: phone
+    icon: Phone
   }
 ]
 
 
-  export const socials = [
+  export const socials: {social: string, handle:string, link:string, icon: ElementType}[] = [
     {
       social: "facebook",
-      handle: "filmproduction .fb",
+      handle: "filmcontemporary.fb",
       link: "/",
-      icon: whiteFacebook
+      icon: WhiteFacebook
     },
     {
       social: "instagram",
-      handle: "filmproduction _",
+      handle: "filmcontemporary _",
       link: "/",
-      icon: insta
+      icon: Insta
     },
     {
       social: "X",
-      handle: "filmproduction _",
+      handle: "filmcontemporary _",
       link: "/",
-      icon: X,
+      icon: Times,
     },
     {
       social: "linkedIn",
-      handle: "filmproduction _",
+      handle: "filmcontemporary _",
       link: "/",
-      icon: linkedIn
+      icon: LinkedIn
     },
   ]
 
@@ -121,10 +123,10 @@ export const menuLinks = [
     name: "Home",
     link: "/"
   },
-  {
-    name: "Add Reviews",
-    link: "/reviews"
-  },
+  // {
+  //   name: "Add Reviews",
+  //   link: "/reviews"
+  // },
   {
     name: "About us",
     link: "/about_us"

@@ -33,7 +33,8 @@ const Footages = () => {
   return (
     <section className="py-10 md:py-24 ">
       <div className="main_wrapper">
-      <h2 className="text-2xl md:text-4xl font-bold mb-5"> Gallery and Work Footage </h2>
+      <h2 className="text-2xl md:text-4xl text-center font-bold mb-5"> Gallery and Work Footage </h2>
+      <p className="md:w-[85%] lg:w-[60%] mx-auto text-center">Lorem ipsum dolor sit amet consectetur. Dui amet et sagittis at massa nisl integer suscipit et. Dolor consectetur non vitae maecenas ultrie</p>
       <div ref={containerRef} className="max-w-4xl mx-auto p-4">
       <Swiper
         modules={[Autoplay, EffectFade]}
