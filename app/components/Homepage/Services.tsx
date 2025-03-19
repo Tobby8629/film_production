@@ -21,6 +21,7 @@ const Services = () => {
             ref={(el) => {
               boxesRef.current[index] = el;
             }}
+            className="opacity-0"
             // className={`${index === 0 ? 'first_service' : ''}`}
           >
             <Image

@@ -20,11 +20,11 @@ const useStagger = <T extends HTMLElement>() => {
           y: 0,
           duration: 0.8,
           ease: "power2.out",
-          delay: .5,
+          delay: .2,
           
           scrollTrigger: {
             trigger: element,
-            start: "top 80%",
+            start: "top 70%",
             toggleActions: "play reverse play reverse",
           },
         }
@@ -40,11 +40,11 @@ const useStagger = <T extends HTMLElement>() => {
             opacity: 1,
             y: 0,
             duration: 1.2,
-            delay: 0.7,
+            delay: .7,
             ease: "power2.out",
             scrollTrigger: {
               trigger: element,
-              start: "top 80%",
+              start: "top 60%",
               toggleActions: "play reverse play reverse",
             },
           }

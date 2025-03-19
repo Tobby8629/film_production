@@ -7,6 +7,7 @@ import DesktopMenu from "../components/layout/DesktopMenu";
 import Image from "next/image";
 import { logo } from "@/public/png";
 import gsap from "gsap";
+import Link from "next/link";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -26,7 +27,9 @@ const NavBar = () => {
   return (
     <nav id="nav" className="main_wrapper relative opacity-0 translate-y-[30px] scale-90 z-50">
       <div className="nav_wrapper">
-        <Image src={logo} alt="film contemporary" className="w-[30px] h-[30px]lg:w-[50px] lg:h-[50px]" />
+        <Link href="/">
+          <Image src={logo} alt="film contemporary" className="w-[30px] h-[30px] lg:w-[50px] lg:h-[50px]" />
+        </Link>
         <DesktopMenu />
         <div className="md:hidden cursor-pointer">
           <FontAwesomeIcon icon={faBars} style={{ fontSize: 25 }} onClick={toggleMenu} />
