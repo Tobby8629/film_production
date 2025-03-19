@@ -24,17 +24,17 @@ const useStagger = <T extends HTMLElement>() => {
           
           scrollTrigger: {
             trigger: element,
-            start: "top 70%",
+            start: "top 80%",
             toggleActions: "play reverse play reverse",
           },
         }
       );
 
       // Animate the paragraph inside the element
-      const paragraph = element.querySelector("p");
-      if (paragraph) {
+      const div = element.querySelector("div");
+      if (div) {
         gsap.fromTo(
-          paragraph,
+          div,
           { opacity: 0, y: 50 },
           {
             opacity: 1,

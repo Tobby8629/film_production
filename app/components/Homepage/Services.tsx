@@ -32,7 +32,8 @@ const Services = () => {
             />
             <div className="header_text">
               <h3>{item.title}</h3>
-              <p className="leading-8">{item.text} <Link className="text-link font-semibold" href={item.name}>Learn More</Link></p>
+              <p className="leading-8 my-3">{item.text}</p>
+              <Link className="text-link text-lg font-semibold" href={item.name}>Learn More</Link>
             </div>
           </div>
         ))}

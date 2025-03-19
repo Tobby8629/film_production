@@ -16,8 +16,8 @@ const Footer = () => {
             <Image src={logo} alt='film contemporary' className='w-[50px] h-[50px] mb-8'/>
             <p className=' font-poppins font-semibold capitalize text-lg'>subscribe for more info</p>
             <div className='subscribe'> 
-              <input name='gmail' placeholder='enter email address' type="email" className='bg-transparent pl-3 w-[70%]'/>  
-              <button className=' rounded-3xl font-poppins bg-blue-500 text-white p-3'>subscribe</button>
+              <input name='gmail' placeholder='Enter Email Address' type="email" className='outline-0 bg-transparent pl-3 w-[70%]'/>  
+              <button className=' rounded-3xl font-poppins bg-blue-500 text-white p-5 capitalize'>subscribe</button>
             </div>
           </section>
           <section className='max-sm:my-7'>
@@ -55,7 +55,7 @@ const Footer = () => {
           </section>
         </div>
         <div className=' border-t-2 py-10 mt-10 border-pry-white lg:flex lg:items-center justify-between'>
-          <p className='max-sm:text-xs font-thin flex items-center'><span className='text-lg mr-1'>&copy;</span> 2025 FILM CONTEMPORARY. ALL RIGHT RESERVED</p>
+          <p className='max-sm:text-xs  font-light flex items-center'><span className='text-lg mr-1 font-semibold '>&copy;</span> FILM CONTEMPORARY. ALL RIGHT RESERVED</p>
           <div className='terms'>
             <p>Terms & Conditions</p>
             <p>Privacy Policy</p>

@@ -27,7 +27,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <header ref={heroRef} className="main_wrapper max-md:!p-2.5 max-md:h-[60vh] h-[100vh] xl:h-[90vh] opacity-0 overflow-hidden md:pt-10 ">
+    <header ref={heroRef} className="main_wrapper max-md:!p-2.5 max-md:h-[70vh] h-[100vh] xl:h-[90vh] opacity-0 overflow-hidden md:pt-10 ">
       <div className="h-full w-full">
         <Swiper
           ref={swiperRef}
@@ -35,7 +35,7 @@ const Hero = () => {
           slidesPerView={1}
           spaceBetween={20}
           loop={true}
-          // autoplay={{ delay: 9000, disableOnInteraction: false }} // Auto-slide
+          autoplay={{ delay: 9000, disableOnInteraction: false }} // Auto-slide
           pagination={{ clickable: true }} 
           className="w-full h-full"
         >
@@ -49,7 +49,7 @@ const Hero = () => {
               <div className="header_text">
                 <h3>{item.title}</h3>
                 <p className="leading-8">
-                  {resize.screen === "mobile"  ? `${item.text.slice(0, 300)}...` : item.text}
+                  {resize.screen === "mobile"  ? `${item.text.slice(0, 250)}...` : item.text}
                 </p>
                 <Link
                   className="text-link !text-lg xl:text-xl font-semibold"

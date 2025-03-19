@@ -16,14 +16,7 @@
   --font-sans: "Open Sans", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 
- 
-}
 
 body {
   @apply font-montserrat;
@@ -54,6 +47,7 @@ body {
 }
 
 .footer {
+  @apply bg-[#EFEFEF];
   box-shadow: 0px 0px 2px 1px gray;
 }
 
@@ -84,8 +78,8 @@ body {
 }
 
 .subscribe {
-  @apply flex items-center justify-between border-[1px] rounded-3xl mt-3;
-  border-color: var(--foreground);
+  @apply pl-3 flex items-center bg-white border-0 justify-between rounded-3xl mt-3;
+  /* border-color: var(--foreground); */
 }
 
 .terms {
@@ -102,7 +96,7 @@ body {
 }
 
 .header_text h3 {
-  @apply mt-5 font-semibold
+  @apply mt-5 text-2xl font-semibold
 }
 
 .first_service {
@@ -114,7 +108,7 @@ body {
 }
 
 .first_service .header_text  {
-  @apply w-[90%] max-md:left-1/2 max-md:-translate-x-1/2  max-lg:absolute bottom-3.5 bg-[#0000005d] px-5 pb-3 md:absolute md:top-1/2 md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 text-white;
+  @apply w-[90%] max-md:left-1/2 max-md:-translate-x-1/2  max-lg:absolute max-lg:bottom-3.5 bg-[#0000005d] h-fit px-5 pb-3 md:absolute top-[35%]  md:top-[58%] md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 text-white;
 }
 
 .first_service .header_text p {
@@ -130,7 +124,59 @@ body {
 }
 
 .review_wrapper {
-  @apply py-10;
+  @apply py-10 mx-auto;
   background: var(--foreground);
+  max-width: 1440px;
   color: var(--background); 
+}
+
+/************** Swiper Indicator *************/
+
+.swiper-pagination {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(20px); 
+  border-radius: 20px !important; 
+  padding: 15px; 
+  bottom: 5px !important; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content !important;
+  left: 50% !important;
+  transform: translateX(-50%)  !important;
+}
+
+/* Style the pagination bullets */
+.swiper-pagination-bullet {
+   background: white !important;
+   opacity: 1 !important; 
+   width: 10px !important;
+   height: 10px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Active bullet styling */
+.swiper-pagination-bullet-active {
+  background: blue !important; 
+  opacity: 1;
+  transform: scale(1.2); 
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
+  .footer {
+    @apply bg-[#0a0a0a];
+  }
+
+  .subscribe {
+    @apply bg-[#272222]
+  }
+
+ 
 }
