@@ -36,7 +36,7 @@ const Reviews = () => {
           <SwiperSlide key={review.id}>
             <div className="p-6 border rounded-lg shadow-md bg-white text-gray-800 my-10">
               <Image src={upperquote} alt={"review"} />
-              <p className="text-lg font-sans italic my-5">{review.review}</p>
+              <p className="text-lg font-sans font-light my-5">{review.review}</p>
               <div className="flex gap-3 items-center">
               <h3 className="mt-2 text-2xl font-semibold capitalize">{review.name}</h3>
               </div>

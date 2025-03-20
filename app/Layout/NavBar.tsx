@@ -8,12 +8,15 @@ import Image from "next/image";
 import { logo } from "@/public/png";
 import gsap from "gsap";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const toggleMenu = useCallback(() => {
     setIsMenuOpen((prev) => !prev);
   }, []);
+
+  const pathname = usePathname()
 
   useEffect(() => {
     // Ensure Hero animation completes before NavBar animation starts
@@ -25,8 +28,8 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav id="nav" className="main_wrapper relative opacity-0 translate-y-[30px] scale-90 z-50">
-      <div className="nav_wrapper">
+    <nav id="nav" className={`${pathname === "/" ? "main_wrapper_home" : "main_wrapper_oth"} `}>
+      <div className={`${pathname === "/" ? "nav_wrapper_home" : "nav_wrapper_oth"} flex justify-between items-center py-2 px-5 md:px-8`}>
         <Link href="/">
           <Image src={logo} alt="film contemporary" className="w-[30px] h-[30px] lg:w-[50px] lg:h-[50px]" />
         </Link>

@@ -28,8 +28,23 @@ body {
   @apply max-w-7xl mx-auto px-5
 }
 
-.nav_wrapper {
-  @apply max-lg:w-[90%] max-lg:mx-auto bg-white text-pry-dark-blue rounded-4xl absolute top-5 md:top-15 flex justify-between items-center py-2 px-5 md:px-8 w-[95%] left-1/2 -translate-x-1/2 z-[99] xl:px-10
+.main_wrapper_home {
+  @apply relative opacity-0 translate-y-[30px] scale-90 z-50 max-w-7xl mx-auto 
+}
+
+.main_wrapper_oth {
+  @apply fixed w-full left-0 right-0 opacity-0 translate-y-[30px] scale-90 z-50;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.nav_wrapper_home {
+  @apply max-lg:w-[90%] max-lg:mx-auto bg-white text-pry-dark-blue rounded-4xl absolute top-5 md:top-15  w-[95%] left-1/2 -translate-x-1/2 z-[99] xl:px-10
+}
+
+.nav_wrapper_oth {
+  @apply w-full max-w-7xl !rounded-none mx-auto;
+  
 }
 
 .active {
@@ -108,7 +123,7 @@ body {
 }
 
 .first_service .header_text  {
-  @apply w-[90%] max-md:left-1/2 max-md:-translate-x-1/2  max-lg:absolute max-lg:bottom-3.5 bg-[#0000005d] h-fit px-5 pb-3 md:absolute top-[35%]  md:top-[58%] md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 text-white;
+  @apply w-[90%] max-md:left-1/2 max-md:-translate-x-1/2  max-lg:absolute max-lg:bottom-3.5 bg-[#0000005d] h-fit px-5 pb-3 md:absolute top-[33%]  md:top-[58%] md:-translate-y-1/2 md:w-8/12 lg:w-6/12 md:left-10 text-white;
 }
 
 .first_service .header_text p {
@@ -137,7 +152,7 @@ body {
   backdrop-filter: blur(20px); 
   border-radius: 20px !important; 
   padding: 15px; 
-  bottom: 5px !important; 
+  bottom: 10px !important; 
   display: flex;
   justify-content: center;
   align-items: center;

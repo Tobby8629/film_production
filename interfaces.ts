@@ -1,3 +1,4 @@
+import { StaticImageData } from "next/image";
 import React, { ReactNode } from "react"
 
 export interface rootLayout {
@@ -14,4 +15,12 @@ export interface mapping<T> {
 export interface mobileMenu {
   toggleMenu: () => void;
   isMenuOpen: boolean;
+}
+
+export interface service {
+  name: string,
+  title:string,
+  text: string,
+  link: string,
+  icon: StaticImageData
 }

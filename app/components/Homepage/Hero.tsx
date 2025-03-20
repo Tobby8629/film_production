@@ -27,7 +27,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <header ref={heroRef} className="main_wrapper max-md:!p-2.5 max-md:h-[70vh] h-[100vh] xl:h-[90vh] opacity-0 overflow-hidden md:pt-10 ">
+    <header ref={heroRef} className="main_wrapper max-md:!p-2.5 max-md:h-[80vh] h-[100vh] xl:h-[100vh] opacity-0 overflow-hidden md:pt-10 ">
       <div className="h-full w-full">
         <Swiper
           ref={swiperRef}
@@ -53,7 +53,7 @@ const Hero = () => {
                 </p>
                 <Link
                   className="text-link !text-lg xl:text-xl font-semibold"
-                  href={item.name}
+                  href={item.link}
                 >
                   Learn More
                 </Link>

@@ -1,3 +1,4 @@
+import { service } from "@/interfaces"
 import { foot1, foot2, foot3, foot4, foot5, service_one } from "@/public/png"
 import { Insta, LinkedIn, Mail, Phone, Times, WhiteFacebook, } from "@/public/svgs"
 import  { ElementType } from "react"
@@ -70,11 +71,12 @@ export const getInTouch : {text: string, icon: ElementType}[] = [
   ]
 
 
-export const services = [
+export const services: service[] = [
   {
     name: "Lorem Ipsu",
     title:"Lorem Ipsum",
     text: footerText,
+    link: "/services/lorem_ipsu",
     icon: service_one
   },
   
@@ -82,6 +84,7 @@ export const services = [
     name: "Lorem Ips",
     title:"Lorem Ipsum",
     text: footerText,
+    link: "/services/Lorem_ips",
     icon: service_one
   },
 
@@ -89,30 +92,35 @@ export const services = [
     name: "Lorem Ip",
     title:"Lorem Ipsum",
     text: footerText,
+    link: "/services/lorem_ip",
     icon: service_one
   },
   {
     name: "Lorem I",
     title:"Lorem Ipsum",
     text: footerText,
+    link: "/services/lorem_i",
     icon: service_one
   },
   {
     name: "Lorem",
     title:"Lorem Ipsum",
     text: footerText,
+    link: "/services/lorem",
     icon: service_one
   },
   {
     name: "Lore",
     title:"Lorem Ipsum",
     text: footerText,
+    link: "/services/lore",
     icon: service_one
   },
   {
     name: "Lor",
     title:"Lorem Ipsum",
     text: footerText,
+    link: "/services/lor",
     icon: service_one
   },
   
