@@ -6,7 +6,9 @@ import foot4 from './foot4.jpg'
 import foot5 from './foot5.jpg'
 import logo from './logo.png'
 import play from './play.png'
-
+import serve_one from './serve_one.jpg'
+import serve_two from './serve_two.jpg'
+import serve_three from './serve_three.jpg'
 export {
   service_one,
   foot1,
@@ -16,4 +18,7 @@ export {
   foot5,
   logo,
   play,
+  serve_one,
+  serve_two,
+  serve_three
 }

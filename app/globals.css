@@ -110,7 +110,8 @@ body {
   @apply my-5 ; 
 }
 
-.header_text h3 {
+.header_text h3,
+.header {
   @apply mt-5 text-2xl font-semibold
 }
 

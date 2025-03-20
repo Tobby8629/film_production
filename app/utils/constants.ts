@@ -1,5 +1,5 @@
 import { service } from "@/interfaces"
-import { foot1, foot2, foot3, foot4, foot5, service_one } from "@/public/png"
+import { foot1, foot2, foot3, foot4, foot5, serve_one, serve_three, serve_two, service_one } from "@/public/png"
 import { Insta, LinkedIn, Mail, Phone, Times, WhiteFacebook, } from "@/public/svgs"
 import  { ElementType } from "react"
 
@@ -229,5 +229,44 @@ export const Review = [
       scrambled it to make a type specimen book.
     `
   },
+
+]
+
+export const serve = [
+  {
+    id:1,
+    name: "Lorem Ipsum",
+    content: `
+      Lorem Ipsum has been the industry's standard 
+      dummy text ever since the 1500s, when an 
+      unknown printer took a galley of type and 
+      scrambled it to make a type specimen book.
+    `,
+  image: serve_one
+  },
+
+  {
+    id:2,
+    name: "jacob",
+    content: `
+      Lorem Ipsum has been the industry's standard 
+      dummy text ever since the 1500s, when an 
+      unknown printer took a galley of type and 
+      scrambled it to make a type specimen book.
+    `,
+    image:serve_two,
+  },
+  {
+    id:3,
+    name: "marty",
+    content: `
+      Lorem Ipsum has been the industry's standard 
+      dummy text ever since the 1500s, when an 
+      unknown printer took a galley of type and 
+      scrambled it to make a type specimen book.
+    `,
+    image:serve_three
+  },
+
 
 ]
