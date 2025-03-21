@@ -5,18 +5,18 @@ import Image from 'next/image';
 
 const Services = () => {
   return (
-    <section>
-      <h2 className="header !my-5 !text-lg">What These Services Include:</h2>
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    <section className='md:w-[90%] md:mx-auto'>
+      <h2 className="header !my-5 !text-lg">What This Service Include:</h2>
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
         <Mapping array={serve}>
           {(item) => (
-            <div key={item.id} className="mb-5">
+            <div key={item.id} className="mb-10">
               <Image 
                 src={item.image} 
                 alt={item.name || 'Service image'} 
                 width={300} 
                 height={200} 
-                className="rounded-lg object-cover"
+                className="rounded-lg object-cover w-full"
                 loading="lazy" 
               />
               <p className="mt-3">{item.content}</p>

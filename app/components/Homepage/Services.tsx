@@ -15,7 +15,7 @@ const Services = () => {
       <div 
         className="space-y-10 grid md:grid-cols-2  gap-10 "
       >
-        {services.map((item, index) => (
+        {services.slice(0,4).map((item, index) => (
           <div
             key={index}
             ref={(el) => {

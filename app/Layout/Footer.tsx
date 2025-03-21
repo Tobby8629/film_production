@@ -36,7 +36,7 @@ const Footer = () => {
               {(item)=>
                 <div className='my-2 flex items-center'>
                   <item.icon className='footer_svg '/>
-                  <a className='font-sans capitalize text-sm' href={item.icon === Phone ? `tel:${item.text}` : `mailto:${item.text}`}>{item.text}</a>
+                  <a className='font-sans text-sm' href={item.icon === Phone ? `tel:${item.text}` : `mailto:${item.text}`}>{item.text}</a>
                 </div>
               }
             </Mapping>

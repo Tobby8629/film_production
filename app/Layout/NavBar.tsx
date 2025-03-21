@@ -28,7 +28,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <nav id="nav" className={`${pathname === "/" ? "main_wrapper_home" : "main_wrapper_oth"} `}>
+    <nav id="nav" className={`${pathname === "/" ? "main_wrapper_home" : "main_wrapper_oth"}`}>
       <div className={`${pathname === "/" ? "nav_wrapper_home" : "nav_wrapper_oth"} flex justify-between items-center py-2 px-5 md:px-8`}>
         <Link href="/">
           <Image src={logo} alt="film contemporary" className="w-[30px] h-[30px] lg:w-[50px] lg:h-[50px]" />
