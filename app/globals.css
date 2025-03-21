@@ -188,7 +188,7 @@ body {
 }
 
 .booking-sec button {
-  @apply p-2 px-5
+  @apply p-2 px-4 text-sm
 
 }
 
