@@ -1,10 +1,10 @@
-import Mail from "./Mail";
 import Phone from "./Phone"
 import facebook from "./facebook.svg"
 import Insta from "./Insta";
 import Times from "./Times";
 import LinkedIn from "./LinkedIn";
 import upperquote from "./upperquote.svg"
+import Mail from "./Mail";
 import WhiteFacebook from "./WhiteFacebook";
 
 export {

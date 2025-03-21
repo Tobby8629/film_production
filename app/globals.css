@@ -61,7 +61,8 @@ body {
   @apply block max-md:text-lg md:font-medium hover:text-gray-500 max-lg:text-[10px] xl:text-xl;
 }
 
-.footer {
+.footer,
+.main_wrapper_oth {
   @apply bg-[#EFEFEF];
   box-shadow: 0px 0px 2px 1px gray;
 }
@@ -76,7 +77,7 @@ body {
 }
 
 .footer_nav section {
-  @apply lg:w-[10%] mb-5
+  @apply lg:w-[14%] mb-5
 }
 
 .footer_nav section:first-child {
@@ -186,7 +187,8 @@ body {
     --foreground: #ededed;
   }
 
-  .footer {
+  .footer,
+  .nav_wrapper_oth {
     @apply bg-[#0a0a0a];
   }
 
