@@ -182,6 +182,15 @@ body {
 
 /********* Detail Page *********/
 
+.detail {
+  @apply pt-12 lg:pt-28 px-2
+}
+
+.detail p {
+  @apply md:text-lg leading-2 lg:text-xl leading-11
+}
+
+
 .booking-sec {
   @apply flex font-poppins font-medium justify-center gap-3 mx-auto items-center my-5 text-blue-600 max-md:w-[98%]
 
