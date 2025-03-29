@@ -9,7 +9,7 @@ import { faCheckDouble } from '@fortawesome/free-solid-svg-icons'
 const page = () => {
     const loop = Array.from({ length: 5 }, (_, i) => i + 1);
   return (
-    <section className='main_wrapper pt-14'>
+    <section className='main_wrapper pt-20 pb-10'>
       <h2 className='md:!mt-12'>Checkout Details</h2>
       <p>
         Lorem ipsum dolor sit amet consectetur. 
@@ -29,7 +29,7 @@ const page = () => {
           </p>
           <Mapping array={loop}>
             {(item)=>(
-              <div key={item}>
+              <div key={item} className='flex items-center gap-2 w-full'>
                 <FontAwesomeIcon icon={faCheckDouble} />
                 <p>Lorem ipsum dolor sit amet consectetur. Quam ut risus.</p>
               </div>
