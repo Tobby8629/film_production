@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { checkout } from '@/public/png'
 import Mapping from '../components/reuseable/Mapping'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCheckDouble } from '@fortawesome/free-solid-svg-icons'
 
 const page = () => {
     const loop = Array.from({ length: 5 }, (_, i) => i + 1);
@@ -29,7 +30,7 @@ const page = () => {
           <Mapping array={loop}>
             {(item)=>(
               <div key={item}>
-                <FontAwesomeIcon icon={"check-double"} />
+                <FontAwesomeIcon icon={faCheckDouble} />
                 <p>Lorem ipsum dolor sit amet consectetur. Quam ut risus.</p>
               </div>
             )}
