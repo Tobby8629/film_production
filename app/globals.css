@@ -187,7 +187,7 @@ body {
 }
 
 .detail p {
-  @apply md:text-lg leading-2 lg:text-xl leading-11
+  @apply md:text-lg leading-5 lg:text-xl leading-11
 }
 
 
