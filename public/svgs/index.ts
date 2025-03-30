@@ -1,5 +1,6 @@
 import Phone from "./Phone"
 import facebook from "./facebook.svg"
+import doubleCheck from "./double_check.svg"
 import Insta from "./Insta";
 import Times from "./Times";
 import LinkedIn from "./LinkedIn";
@@ -15,5 +16,6 @@ export {
   Insta,
   Times,
   WhiteFacebook,
-  upperquote
+  upperquote,
+  doubleCheck,
 }

@@ -11,7 +11,7 @@ const Video = ({ service }: { service: service }) => {
   if (!service?.icon) return null;
 
   return (
-    <section className="relative my-5 w-full max-md:min-h-[250px] md:w-[90%] md:mx-auto md:h-[400px] xl:min-h-[520px]">
+    <section className="relative my-5 w-full max-md:min-h-[250px] md:w-[90%] md:mx-auto md:h-[500px] xl:min-h-[520px]">
 
       <Image
         src={service.icon as StaticImageData}

@@ -183,7 +183,7 @@ body {
 /********* Detail Page *********/
 
 .detail {
-  @apply pt-12 lg:pt-28 px-2
+  @apply pt-12 lg:pt-24 px-2
 }
 
 .detail p {
