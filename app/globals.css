@@ -14,6 +14,7 @@
   --font-montserrat: "Montserrat", sans-serif;
   --font-poppins: "Poppins", sans-serif;
   --font-sans: "Open Sans", sans-serif;
+  --breakpoint-xs: 30rem
 }
 
 
@@ -49,6 +50,10 @@ body {
 
 .active {
   @apply h-0.5 mx-auto rounded-xl bg-blue-500 w-[80%] translate-y-0.5
+}
+
+.button {
+  @apply font-poppins bg-blue-500 text-white p-5 capitalize
 }
 
 .mobile_menu {
@@ -182,12 +187,14 @@ body {
 
 /********* Detail Page *********/
 
-.detail {
+.detail,
+.checkout {
   @apply pt-12 lg:pt-24 px-2
 }
 
-.detail p {
-  @apply md:text-lg lg:text-xl leading-11
+.detail p,
+.checkout p {
+  @apply leading-7 md:text-lg md:leading-9
 }
 
 
@@ -196,10 +203,46 @@ body {
 
 }
 
+.booking_down {
+  @apply h-fit p-5 rounded-lg py-10;
+}
+
 .booking-sec button {
   @apply p-2 px-4 text-sm
 
 }
+
+.checkout h2  {
+  @apply font-semibold text-2xl 
+}
+
+.checkout_main {
+  @apply mt-7 lg:flex lg:justify-between
+}
+
+.checkout_form {
+  @apply w-full
+}
+
+.checkout_form label {
+  @apply flex items-baseline gap-[3px] mb-2 capitalize font-poppins font-medium
+}
+
+.asterisk {
+  @apply text-red-500 text-[8px] -translate-y-1;
+}
+
+.checkout input,
+.checkout textarea {
+  @apply max-xs:w-full max-md:w-[70%] max-lg:w-[50%] w-full border-[1px] p-4 outline-0 rounded-lg;
+  border-color: var(--foreground);
+}
+
+.checkout textarea {
+  @apply min-h-[120px]
+}
+
+
 
 
 
@@ -217,6 +260,11 @@ body {
   .subscribe {
     @apply bg-[#272222]
   }
+}
 
- 
+@media (min-width: 1024px) {
+  .booking_down {
+    background-color: var(--background);
+  box-shadow: 0px 0px 5px 1px gray;
+  }
 }
