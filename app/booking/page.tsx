@@ -21,17 +21,17 @@ const page = () => {
           <Image src={checkout} alt='checkout' />
           <h2>Booking Consulation</h2>
           <p>
-          Lorem ipsum dolor sit amet consectetur. 
-          Donec condimentum quis praesent sed arcu 
-          ut eget nunc. Arcu integer consectetur massa 
-          porttitor nulla morbi. 
-          Lectus dictumst pellentesque 
+            Lorem ipsum dolor sit amet consectetur. 
+            Donec condimentum quis praesent sed arcu 
+            ut eget nunc. Arcu integer consectetur massa 
+            porttitor nulla morbi. 
+            Lectus dictumst pellentesque 
           </p>
           <Mapping array={loop}>
             {(item)=>(
-              <div key={item} className='flex items-center gap-2 w-full'>
-                <Image src={doubleCheck} alt={"check"} />
-                <p>Lorem ipsum dolor sit amet consectetur. Quam ut risus.</p>
+              <div key={item} className='flex items-center gap-[5px] my-3 w-full'>
+                <Image src={doubleCheck} className="w-[17px]" alt={"check"} />
+                <p className=''>Lorem ipsum dolor sit amet consectetur. Quam ut risus.</p>
               </div>
             )}
           </Mapping>
