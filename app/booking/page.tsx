@@ -12,7 +12,7 @@ const page = () => {
   return (
     <section className='main_wrapper !px-[1.5rem] checkout !pt-28 !pb-10'>
       <h2 className='md:!mt-12 !text-center'>Checkout Details</h2>
-      <p className='text-center'>
+      <p className='text-center my-2 md:w-[85%] lg:w-[50%] mx-auto '>
         Lorem ipsum dolor sit amet consectetur. 
         Rhoncus netus sodales vivamus porttitor. 
         Faucibus scelerisque in enim 

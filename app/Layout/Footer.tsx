@@ -17,7 +17,7 @@ const Footer = () => {
             <p className=' font-poppins font-semibold capitalize text-lg'>subscribe for more info</p>
             <div className='subscribe'> 
               <input name='gmail' placeholder='Enter Email Address' type="email" className='outline-0 bg-transparent pl-3 w-[70%]'/>  
-              <button className=' rounded-3xl button'>subscribe</button>
+              <button className='button rounded-3xl'>subscribe</button>
             </div>
           </section>
           <section className='max-sm:my-7'>
