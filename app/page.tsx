@@ -17,37 +17,37 @@ export default function Home() {
   // })
   // console.log("query", query.data);
 
-const test = async () => {
-  const allEventTypeURIs = ["30_Minute_Meeting", "video_production"];
-  const allSlots: any[] = [];
+// const test = async () => {
+//   const allEventTypeURIs = ["30_Minute_Meeting", "video_production"];
+//   const allSlots: any[] = [];
 
-  for (const type of allEventTypeURIs) {
-    try {
-      const response = await getRequest(`/event_type_availability_times?event_type=${type}?${calenderlyUser}`);
-      const slots = response.data;
+//   for (const type of allEventTypeURIs) {
+//     try {
+//       const response = await getRequest(`/event_type_availability_times?event_type=${type}?${calenderlyUser}`);
+//       const slots = response.data;
 
-      if (Array.isArray(slots?.collection)) {
-        allSlots.push(...slots.collection);
-      }
-    } catch (error) {
-      console.error(`Failed to fetch availability for ${type}`, error);
-    }
-  }
+//       if (Array.isArray(slots?.collection)) {
+//         allSlots.push(...slots.collection);
+//       }
+//     } catch (error) {
+//       console.error(`Failed to fetch availability for ${type}`, error);
+//     }
+//   }
 
-  // Group and deduplicate by date
-  const availableDates = [
-    ...new Set(
-      allSlots
-        .filter(slot => slot?.start_time)
-        .map(slot => slot.start_time.split("T")[0])
-    ),
-  ];
+//   // Group and deduplicate by date
+//   const availableDates = [
+//     ...new Set(
+//       allSlots
+//         .filter(slot => slot?.start_time)
+//         .map(slot => slot.start_time.split("T")[0])
+//     ),
+//   ];
 
-  console.log(availableDates);
-};
+//   console.log(availableDates);
+// };
 
-  useEffect(() => {
-    test();  }, []);
+//   useEffect(() => {
+//     test();  }, []);
   return (
     <main>
       <Hero />

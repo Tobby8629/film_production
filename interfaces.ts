@@ -24,3 +24,12 @@ export interface service {
   link: string,
   icon: StaticImageData
 }
+
+export interface ServiceApi {
+  name: string;
+  // Add more properties if needed
+}
+
+export interface ServicesResponse {
+  collection: ServiceApi[];
+}

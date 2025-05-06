@@ -1,10 +1,40 @@
-import React from 'react'
+"use client"
+import React, { useState } from 'react'
 import Mapping from '../reuseable/Mapping'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons/faAsterisk'
+import { useQuery } from '@tanstack/react-query'
+import { fetchQuery } from '@/app/api/QueryFn'
+import { ServicesResponse } from '@/interfaces'
+
+interface infoInt {
+  [key: string]: string;
+}
+
+interface FormField {
+  name: string;
+  type: 'text' | 'email' | 'dropdown'; 
+  important: boolean;
+  placeholder?: string;
+}
+
+type All = FormField[]; 
 
 const BookingForm = () => {
-  const form = [
+  const [info, setInfo] = useState<infoInt>({
+    name: "",
+    email: "",
+    service: "",
+  })
+
+  const update = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setInfo(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  const form: All = [
     {
       name: "name",
       type: "text",
@@ -18,10 +48,9 @@ const BookingForm = () => {
       placeholder: "Enter Email"
     },
     {
-      name: "date",
-      type: "date",
+      name: "service",
+      type: "dropdown",
       important: true,
-      placeholder: "Choose a Date"
     },
     {
       name: "comment",
@@ -31,6 +60,12 @@ const BookingForm = () => {
     }
     
   ]
+  const url = "/event_types?user=https://api.calendly.com/users/c8b10734-c82c-427e-9e11-7b9f3171db88"
+  const { data,} = useQuery <ServicesResponse> ({
+    queryKey: ["services"],
+    queryFn: () => fetchQuery(url)
+  })
+
   return (
     <form className='checkout_form'>
       <h2 className=' !text-xl'>Booking Information</h2>
@@ -43,7 +78,12 @@ const BookingForm = () => {
             </label>
             {item.name === "comment" ? 
             <textarea name={item.name} id={item.name} placeholder={item.placeholder}  /> : 
-            <input type={item.type} name={item.name} id={item.name} placeholder={item.placeholder}  />}
+            item.name === "service" ?
+            <select>
+              {data?.collection.map((e: unknown)=><option key={e.name}>{e.name}</option>)}
+            </select>
+            :
+            <input type={item.type} onChange={update} value={info[item.name]} name={item.name} id={item.name} placeholder={item.placeholder}  />}
           </div>
         )}
       </Mapping>
