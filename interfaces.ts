@@ -27,9 +27,21 @@ export interface service {
 
 export interface ServiceApi {
   name: string;
+  scheduling_url:string; 
   // Add more properties if needed
 }
 
 export interface ServicesResponse {
   collection: ServiceApi[];
+}
+
+export interface infoInt {
+  [key: string]: string;
+}
+
+export interface FormField {
+  name: string;
+  type: 'text' | 'email' | 'dropdown';
+  important: boolean;
+  placeholder?: string;
 }

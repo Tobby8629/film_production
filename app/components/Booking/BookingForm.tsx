@@ -1,95 +1,72 @@
 "use client"
 import React, { useState } from 'react'
 import Mapping from '../reuseable/Mapping'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAsterisk } from '@fortawesome/free-solid-svg-icons/faAsterisk'
 import { useQuery } from '@tanstack/react-query'
 import { fetchQuery } from '@/app/api/QueryFn'
-import { ServicesResponse } from '@/interfaces'
+import { FormField, infoInt, ServicesResponse } from '@/interfaces'
+import FormFieldRenderer from './FieldRenderer'
 
-interface infoInt {
-  [key: string]: string;
-}
+type All = FormField[];
 
-interface FormField {
-  name: string;
-  type: 'text' | 'email' | 'dropdown'; 
-  important: boolean;
-  placeholder?: string;
-}
+const formFields: All = [
+  { name: "name", type: "text", important: true, placeholder: "Name" },
+  { name: "email", type: "email", important: true, placeholder: "Enter Email" },
+  { name: "service", type: "dropdown", important: true },
+  { name: "comment", type: "text", important: false, placeholder: "drop a note (if you’d like)..." },
+];
 
-type All = FormField[]; 
+const INITIAL_STATE = formFields.reduce((acc, field) => {
+  acc[field.name] = "";
+  return acc;
+}, {} as infoInt);
 
 const BookingForm = () => {
-  const [info, setInfo] = useState<infoInt>({
-    name: "",
-    email: "",
-    service: "",
-  })
+  const [info, setInfo] = useState<infoInt>(INITIAL_STATE);
 
-  const update = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setInfo(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const form: All = [
-    {
-      name: "name",
-      type: "text",
-      important: true,
-      placeholder: "Name"
-    },
-    {
-      name: "email",
-      type: "email",
-      important: true,
-      placeholder: "Enter Email"
-    },
-    {
-      name: "service",
-      type: "dropdown",
-      important: true,
-    },
-    {
-      name: "comment",
-      type: "text",
-      important: false,
-      placeholder: "drop a note (if you’d like)..."
-    }
-    
-  ]
-  const url = "/event_types?user=https://api.calendly.com/users/c8b10734-c82c-427e-9e11-7b9f3171db88"
-  const { data,} = useQuery <ServicesResponse> ({
+  const { data } = useQuery<ServicesResponse>({
     queryKey: ["services"],
-    queryFn: () => fetchQuery(url)
-  })
+    queryFn: () => fetchQuery("/event_types?user=https://api.calendly.com/users/c8b10734-c82c-427e-9e11-7b9f3171db88"),
+  });
+
+  const hasEmptyValue = Object.entries(info).some(([key, value]) => {
+    const field = formFields.find(f => f.name === key);
+    return field?.important && !value;
+  });
+
+  const update = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
+    setInfo(prev => ({ ...prev, [name]: value }));
+  };
+
+  const redirect = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const url = `${info.service}?name=${encodeURIComponent(info.name)}&email=${encodeURIComponent(info.email)}`;
+    window.location.href = url;
+  };
 
   return (
-    <form className='checkout_form'>
-      <h2 className=' !text-xl'>Booking Information</h2>
-      <Mapping array={form} className='my-3'>
-        {(item)=>(
-          <div className='my-4'>
-            <label htmlFor={item.name}>
-              <span>{item.name}</span>
-              {item.important ? <FontAwesomeIcon icon={faAsterisk} size={"sm"} className='asterisk'/> : null}
-            </label>
-            {item.name === "comment" ? 
-            <textarea name={item.name} id={item.name} placeholder={item.placeholder}  /> : 
-            item.name === "service" ?
-            <select>
-              {data?.collection.map((e: unknown)=><option key={e.name}>{e.name}</option>)}
-            </select>
-            :
-            <input type={item.type} onChange={update} value={info[item.name]} name={item.name} id={item.name} placeholder={item.placeholder}  />}
-          </div>
+    <form className='checkout_form' onSubmit={redirect}>
+      <h2 className='!text-xl'>Booking Information</h2>
+      <Mapping array={formFields} className='my-3'>
+        {(field) => (
+          <FormFieldRenderer
+            info={info}
+            setInfo={setInfo}
+            field={field}
+            value={info[field.name]}
+            onChange={update}
+            options={field.name === "service" ? data?.collection : undefined}
+          />
         )}
       </Mapping>
-      <button className='button rounded-sm !px-10 !py-3 font-medium capitalize' type="submit">Continue</button>
+      <button
+        disabled={hasEmptyValue}
+        className={`${hasEmptyValue ? "bg-gray-400" : "button"} rounded-sm !px-10 !py-3 font-medium capitalize`}
+      >
+        Continue
+      </button>
     </form>
-  )
-}
+  );
+};
 
-export default BookingForm
+export default BookingForm;

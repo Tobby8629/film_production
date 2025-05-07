@@ -29,7 +29,7 @@ export const fetchQuery  = async (url: string): Promise<ServicesResponse> => {
     const response = await getRequest(url) 
     if (response.status === 200 || response.status === 201) {
         console.log("Response data:", response.data);
-        return response.data;
+        return response.data as ServicesResponse;
       }
       throw new Error(`Request failed with status ${response.status}`);
   }
